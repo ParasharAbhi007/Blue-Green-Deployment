@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: hotel-green
+  name: hotel-green  # Change the name to hotel-green
   namespace: hotel
 spec:
   replicas: 3
   selector:
     matchLabels:
       app: hotel
-      version: green
+      version: green  # Change the version to green
   template:
     metadata:
       labels:
         app: hotel
-        version: green
+        version: green  # Change the version to green
     spec:
       containers:
       - name: hotel
-        image: vipindevops/blue-green:tagname:1.1
+        image: vipindevops/blue-green:1.1  # Use the correct image version for green
         ports:
         - containerPort: 80
