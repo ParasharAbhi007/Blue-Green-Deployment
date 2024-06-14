@@ -11,4 +11,16 @@ service:
           description: ""
           required: false
           value: sdd
+      artifacts:
+        primary:
+          primaryArtifactRef: <+input>
+          sources:
+            - spec:
+                connectorRef: frg
+                artifactPath: <+input>
+                tag: <+input>
+                repository: docker-local
+                repositoryFormat: docker
+              identifier: art
+              type: ArtifactoryRegistry
     type: Kubernetes
