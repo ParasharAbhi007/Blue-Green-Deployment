@@ -1,0 +1,14 @@
+service:
+  name: shells3
+  identifier: shells3
+  orgIdentifier: AbhiOrg
+  projectIdentifier: CSETest1
+  serviceDefinition:
+    spec:
+      variables:
+        - name: dfs
+          type: String
+          description: ""
+          required: false
+          value: sdd
+    type: Kubernetes
